@@ -1,0 +1,315 @@
+/*...Global...*/
+body,
+html{
+	font-family: "Nunito Sans", sans-serif;
+	font-size:20px;
+	color:#000;
+	text-align: center;
+	overflow-x: hidden;
+}
+/*...PopOver Background...*/
+#popOver{
+	position:absolute;
+	top:0;
+	display:none;
+	width:100%;
+	background-color: rgba(85,85,85,0.9);
+}
+
+#border{
+	margin-top:60px;
+	margin-bottom:60px;
+	padding:9px;
+	border:1px solid #fff;
+}
+
+#content{
+	position:relative;
+	background-color:#FFF;
+}
+
+.rectangle{
+	position:absolute;
+	left:50%;
+	width:160px;
+	height:110px;
+	margin-left:-80px;
+	border:10px solid #FFF;
+}
+
+#topRectangle{
+	z-index:0;
+	margin-top:-55px;
+}
+
+#bottomRectangle{
+	bottom:0;
+	z-index:0;
+	margin-bottom:-55px;
+}
+
+#popOver img{
+	position:absolute;
+	z-index:0;
+	user-select:none;
+}
+
+#chisel{
+	top:40%;
+	left:-450px;
+}
+
+#wood{
+	top:10%;
+	right:-100px;
+}
+
+@media only screen and (max-width: 1200px){
+	#chisel{
+		left:-300px;
+		width:400px;
+	}
+
+	#wood{
+		right:-50px;
+		width:150px;
+	}
+}
+
+@media only screen and (max-width: 992px){
+	#chisel{
+		display:none;
+	}
+
+	#wood{
+		display:none;
+	}
+}
+/*...Title Section...*/
+#buttonClose{
+	z-index:1;
+	height:72px;
+	background-image:url("../img/buttonClose.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color:#FFF;
+	border:none;
+}
+
+#title{
+	margin-bottom:70px;
+}
+
+#title p:first-child{
+	letter-spacing: 2px;
+}
+
+#title p:nth-child(2){
+	font-family: "Libre Baskerville", serif;
+}
+
+#title h1{
+	margin-top:10px;
+	font-family: "Playfair Display", serif;
+	font-size:60px;
+}
+
+span{
+	color:#9f173d;
+}
+
+@media only screen and (max-width: 576px){
+	#title{
+		margin-bottom:20px;
+	}
+	#title h1{
+		font-size:50px;
+	}
+}
+/*...Paragraph Section...*/
+#paragraph p{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#underline{
+	width:160px;
+	margin:0 auto;
+	margin-top:50px;
+	border-bottom:2px solid #c40045;
+}
+
+@media only screen and (max-width: 576px){
+	#underline{
+		margin-top:20px;
+	}
+}
+/*...List Section...*/
+#list{
+	margin-bottom:90px;
+}
+
+#list h1{
+	margin-top:60px;
+	margin-bottom:50px;
+	letter-spacing: 2px;
+}
+
+ul{
+	padding-left:70px;
+	padding-right:10px;
+}
+
+li{
+	padding-bottom:8px;
+	text-align:left;
+	list-style-type: none;
+	font-size:18px;
+}
+
+li:before{
+	padding-right:20px;
+	vertical-align:middle;
+	color:#c40045;
+	font-size:7px;
+	content: "\25C6";
+}
+
+@media only screen and (max-width: 576px){
+	#list{
+		margin-bottom:20px;
+	}
+
+	#list h1{
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+
+	ul{
+		padding-left:10px;
+	}
+}
+/*...Form Section...*/
+#formSection{
+	padding-top:90px;
+	padding-bottom:140px;
+	background:#9f173d;
+}
+
+#formSection h1{
+	margin-bottom:0;
+	font-family: "Playfair Display", serif;
+	font-size:28px;
+	letter-spacing:1px; 
+	color:#FFF;
+}
+
+#formSection p{
+	color:#FFF;
+}
+
+input[type=text],
+input[type=email]{
+	margin:4px;
+	width:37%;
+	height:58px;
+	padding-left:10px;
+	font-size: 18px;
+	border:none;
+	border-bottom:1px solid #bf647e;
+}
+
+input::placeholder{
+	font-family: "Nunito Sans", sans-serif;
+	color:#000;
+	font-size: 18px;
+}
+
+form button{
+	width:20%;
+	height:58px;
+	margin:4px;
+	font-family: "Playfair Display", serif;
+	color:#FFF;
+	background-color: #000;
+	border:none;
+	border-bottom:1px solid #6a0f29;
+}
+
+@media only screen and (max-width: 576px){
+	#formSection{
+		padding-top:20px;
+		padding-bottom:70px;
+	}
+
+	input[type="text"],
+	input[type="email"]{
+		width:90%;
+	}
+
+	form button{
+		width:90%;
+	}
+}
+/*...Check Box...*/
+#checkboxSection{
+	width:480px;
+	margin:0 auto;
+	margin-top:20px;
+	text-align: left;
+}
+
+#checkboxSection label{
+	position: relative;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 30px;
+	color:#fbb6ce;
+	font-weight: 400;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+#checkboxSection input{
+	height:0;
+	opacity:0;
+}
+
+#checkboxIndicator{
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	border: 1px solid #FBB6CE;
+}
+
+#checkboxIndicator:after{
+	position: absolute;
+	display: none;
+	box-sizing: unset;
+	content: "";
+}
+
+#checkboxSection input:checked ~ #checkboxIndicator:after{
+	display: block;
+}
+
+#checkboxSection input:focus ~ #checkboxIndicator{
+	border:1px solid #a6c8ff;
+}
+
+#checkboxIndicator:after{
+	top:2px;
+	left:2px;
+	width: 10px;
+	height: 10px;
+	background-color:#c86d87;
+}
+
+@media only screen and (max-width: 576px){
+	#checkboxSection{
+	width:260px;
+	margin-top:10px;
+	}
+}
